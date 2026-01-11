@@ -8,10 +8,15 @@
   "peerDependencies": {
     "typescript": "^5"
   },
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.1.2",
-    "node-cron": "^4.2.1"
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.11"
   }
 }
