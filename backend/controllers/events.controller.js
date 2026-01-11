@@ -1,0 +1,1 @@
+export const getEventsController = async (req,res) =>{}
