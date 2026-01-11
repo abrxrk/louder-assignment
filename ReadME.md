@@ -95,7 +95,7 @@ During deployment, I encountered a few real-world issues:
 Initially, data was being stored in the test database instead of the intended database. This was resolved by explicitly setting the database name in the MongoDB connection string.
 
 **Render cold starts:**
-As Render's free tier spins down inactive services, deployments and webhook testing sometimes appeared delayed. Monitoring logs and understanding cold-start behavior helped avoid unnecessary redeploys.
+As Render's free tier spins down inactive services, deployments and webhook testing sometimes appeared delayed. Monitoring logs and understanding cold-start behavior helped avoid unnecessary redeploys.To solve this issue of server going down, I used uptime robot to build a cron job for pinging this api https://louder-assignment-hlpm.onrender.com/health to keep the server alive.
 
 **Webhook testing before deployment:**
 I learned that webhooks must point to a live backend URL, so deploying early was essential to test end-to-end scraping.
@@ -124,3 +124,4 @@ Given more time, I would:
 - Improve deduplication using indexes
 - Add analytics for event popularity
 - Enhance email notifications for opted-in users
+- Currently I am using Browser AI's free tier is why, I am low on scraping, but given more time I would shift to a better service or build my own scraping tool for better automated scraping and updating my database.
