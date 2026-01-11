@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./utils/connectDb.js";
 import { EventRouter } from "./routes/events.routes.js";
 import { SubscribeRouter } from "./routes/subscriber.routes.js";
+import { webHookRoute } from "./routes/webhook.routes.js";
 
 const app = express();
 dotenv.config();
@@ -14,6 +15,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", EventRouter);
 app.use("/api", SubscribeRouter);
+app.use('/api/webhooks' , webHookRoute)
 
 connectDB();
 app.listen(3000, () => {
