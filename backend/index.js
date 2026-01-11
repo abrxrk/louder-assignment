@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors"
 import { connectDB } from "./utils/connectDb.js";
 import { EventRouter } from "./routes/events.routes.js";
 import { SubscribeRouter } from "./routes/subscriber.routes.js";
@@ -7,6 +8,7 @@ import { webHookRoute } from "./routes/webhook.routes.js";
 
 const app = express();
 dotenv.config();
+app.use(cors())
 app.use(express.json());
 
 app.get("/", (req, res) => {
