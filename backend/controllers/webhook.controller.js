@@ -9,6 +9,7 @@ export const browseAiWebhook = async (req, res) => {
 
     // Accept common shapes: data.items (Browse AI), items, events, or raw array
     const events =
+      payload?.capturedLists?.["Sydney Events"] ||
       payload?.data?.items ||
       payload?.items ||
       payload?.events ||
