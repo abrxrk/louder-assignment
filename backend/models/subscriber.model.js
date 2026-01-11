@@ -4,7 +4,10 @@ const { Schema } = mongoose;
 
 const subscriberSchema = new Schema(
   {
-    email: String,
+    email: {
+      type: String,
+      unique: true,
+    },
     optIn: { type: Boolean, default: false },
   },
   { timestamps: true },
