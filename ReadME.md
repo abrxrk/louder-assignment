@@ -9,6 +9,7 @@ The objective of Assignment 1 was to build a web application that automatically 
 I implemented a full-stack solution using Node.js, Express, MongoDB, and React, with automated scraping handled through Browse AI and webhook integration.
 
 Frontend- https://louder-assignment-igyz.vercel.app/
+
 Backend- https://louder-assignment-hlpm.onrender.com/
 
 ---
