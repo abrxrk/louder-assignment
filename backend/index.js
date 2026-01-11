@@ -19,6 +19,7 @@ app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
 
+
 app.use("/api", EventRouter);
 app.use("/api", SubscribeRouter);
 app.use("/api/webhooks", webHookRoute);
